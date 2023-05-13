@@ -8,3 +8,9 @@
 Помогите Кате отгадать задуманные Петей числа.
 '''
 
+x = int(input("Введите сумму чисел X и Y, X и Y ≤1000: "))
+y = int(input("Введите произведение чисел X и Y, X и Y ≤1000: "))
+for i in range(x):
+    for j in range(y):
+        if x == i + j and y == i * j:
+            print(f'X = {i}, Y = {j}')
