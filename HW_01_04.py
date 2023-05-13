@@ -19,3 +19,17 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+debet = int(input("Введите выручку фирмы: "))
+credit = int(input("Введите издержки: "))
+balance = debet - credit
+profitability = balance / debet
+number_of_employees = int(input("Введите количество сотрудников фирмы: "))
+profitability_per_employee = balance / number_of_employees 
+
+print(f"Прибыль компании составила {balance} рублей")
+
+if debet < credit:
+    print ('Фирма работает в убыток')
+else:
+    print(f"Рентабельность выручки фирмы составила {profitability} рублей")
+print(f"Прибыль/убыль фирмы в расчете на одного сотрудника составила  {profitability_per_employee} рублей")
