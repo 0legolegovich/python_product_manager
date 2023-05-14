@@ -7,3 +7,16 @@
 
 385916 -> yes
 123456 -> no'''
+
+
+number = int(input('Введите шестизначный номер билета: '))
+first_three = number//1000
+first_three_sum = first_three//100 + (first_three%100)//10 + first_three%10
+
+last_three = number%1000
+last_three_sum = last_three//100 + (last_three%100)//10 + last_three%10
+
+if first_three_sum == last_three_sum:
+    print('У вас счастливый билет!')
+else:
+    print('В этот раз счастливый билет у кого-то другого')
