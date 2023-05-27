@@ -10,5 +10,16 @@
     -> 1
 '''
 
+n = int(input("Введите натуральное число N: "))
+x = int(input("Введите число X: "))
+
+array = []
+count = 0
+for i in range(n):
+    array.append(i + 1)
+    if i == x:
+        count += 1
+print(array)
+print(f'Число {x} встречается в заданном массиве {count} раз')
 
 
