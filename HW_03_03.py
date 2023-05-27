@@ -24,3 +24,24 @@ Q, Z – 10 очков.
     12
 '''
 
+word =input("Введите слово, состоящее из букв либо английского, либо русского алфавита: ")
+
+count = 0
+for letter in word.upper():
+    if (letter in "AEIOULNSTR") or (letter in "АВЕИНОРСТ"):
+        count += 1
+    elif (letter in "DG") or (letter in "ДКЛМПУ"):
+        count += 2
+    elif (letter in "BCMP") or (letter in "БГЁЬЯ"):
+        count += 3
+    elif (letter in "FHVWY") or (letter in "ЙЫ"):
+        count += 4
+    elif (letter in "K") or (letter in "ЖЗХЦЧ"):
+        count += 5
+    elif (letter in "JX") or (letter in "ШЭЮ"):
+        count += 8
+    elif (letter in "QZ") or (letter in "ФЩЪ"):
+        count += 10
+    
+print (f"Стоимость введенного вами слова равна {count}")
+
